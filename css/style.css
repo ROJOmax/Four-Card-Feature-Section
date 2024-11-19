@@ -125,12 +125,20 @@ header > p {
 }
 
 .card {
-
     padding: 2rem;
-    border-top: .36rem solid;
-    box-shadow: 0 .7rem 1.5rem rgb(0 50 100 / .3);
-    border-radius: .4rem;
+    border-top: 0.36rem solid;
+    box-shadow: 0 0.7rem 1.5rem rgb(0 50 100 / 0.3);
+    border-radius: 0.4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgb(0 50 100 / 0.4); /* Slightly increase the shadow intensity */
+}
+
+
 
 .border-cyan {
     border-color: var(--Cyan);
