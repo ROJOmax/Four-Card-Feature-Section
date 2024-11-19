@@ -1,0 +1,155 @@
+:root {
+
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+
+    --ff-main: "Poppins", sans-serif;
+
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+
+    --fs-main: .9375rem;
+    --fs-bold: 1.25rem;
+    --fs-bolder: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: var(--ff-main);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--Grayish-Blue)
+}
+
+
+body {
+    margin: 0;
+    padding-block-end: 7rem;
+
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.6;
+    color: var(--Very-Dark-Blue);
+    ;
+
+}
+
+.wrapper {
+
+    /*not letting the cards touch the borders when size getting smaller  */
+    padding-inline: 2rem;  
+    
+    
+    margin-inline: auto;
+    max-width: 1200px;
+
+
+}
+
+.wrapper--narrow {
+
+    max-width: 600px;
+
+
+
+
+
+}
+
+header {
+    text-align: center;
+    margin-block: 5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h1 span {
+    font-weight: var(--fw-light);
+}
+
+header > p {
+    font-size: 1rem;
+    
+    font-weight: var(--fw-light);
+}
+.layout-grid {
+
+
+    display: grid;
+    --gap: 2rem;
+    gap: var(--gap);
+}
+
+@media (min-width: 800px) {
+    .layout-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card-img {
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+
+}
+
+
+.layout-grid>* {
+    flex: 1;
+}
+
+.col {
+
+    display: grid;
+    align-items: center;
+    gap: var(--gap)
+}
+
+.card {
+
+    padding: 2rem;
+    border-top: .36rem solid;
+    box-shadow: 0 .7rem 1.5rem rgb(0 50 100 / .3);
+    border-radius: .4rem;
+}
+
+.border-cyan {
+    border-color: var(--Cyan);
+}
+
+.border-red {
+    border-color: var(--Red);
+}
+
+.border-orange {
+    border-color: var(--Orange);
+}
+
+.border-blue {
+    border-color: var(--Blue);
+}
+
+.card-title {
+    font-size: var(--fs-bold);
+    font-weight: var(--fw-bold);
+    margin: 0;
+}
